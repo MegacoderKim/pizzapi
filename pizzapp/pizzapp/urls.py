@@ -15,6 +15,8 @@ api_v1_docs = [
     ), name='swagger-ui')
 ]
 
+
 urlpatterns = [
-    path('api/v1/', include(api_v1_docs))
+    path('api/v1/', include(api_v1_docs)),
+    path('api/v1/', include('products.urls'))
 ]
