@@ -18,5 +18,7 @@ api_v1_docs = [
 
 urlpatterns = [
     path('api/v1/', include(api_v1_docs)),
-    path('api/v1/', include('products.urls'))
+    path('api/v1/', include('products.urls')),
+    path('api/v1/', include('accounts.urls')),
+    path('api/v1/', include('orders.urls'))
 ]

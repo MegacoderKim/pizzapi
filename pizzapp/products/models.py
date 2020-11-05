@@ -10,6 +10,10 @@ class ProductSize(models.Model):
     created_date = models.DateField(auto_now_add=True, auto_now=False)
     updated_date = models.DateField(auto_now_add=False, auto_now=True)
 
+    def __str__(self):
+        return self.title
+    
+
     class Meta:
         verbose_name = _('Product Size')
         verbose_name_plural = _('Products Sizes')
@@ -21,6 +25,10 @@ class ProductFlavour(models.Model):
     active = models.BooleanField(default=True)
     created_date = models.DateField(auto_now_add=True, auto_now=False)
     updated_date = models.DateField(auto_now_add=False, auto_now=True)
+
+    def __str__(self):
+        return self.title
+    
 
     class Meta:
         verbose_name = _('Product Flavour')
@@ -37,6 +45,9 @@ class Product(models.Model):
     price = models.DecimalField(_('Product Proce'), max_digits=15, decimal_places=2)
     created_date = models.DateField(auto_now_add=True, auto_now=False)
     updated_date = models.DateField(auto_now_add=False, auto_now=True)
+
+    def __str__(self):
+        return self.title
 
     class Meta:
         verbose_name = _('Product')
