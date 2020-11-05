@@ -24,5 +24,5 @@ class CustomerViewSet(viewsets.ViewSet):
         new_customer = CustomerSerializer(data=request.data)
         if new_customer.is_valid():
             new_customer.save()
-            return Response(new_customer.data)
+            return Response(new_customer.data, status=201)
         return Response(new_customer.errors, status=400)

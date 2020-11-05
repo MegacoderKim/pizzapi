@@ -8,6 +8,6 @@ from products.views import (
 router = routers.SimpleRouter()
 router.register(r'products', ProductViewSet)
 router.register(r'flavours', ProductFlavourViewSet)
-router.register(r'sizes', ProductSizeViewSet)
+router.register(r'sizes', ProductSizeViewSet,basename='sizes')
 
 urlpatterns = router.urls
